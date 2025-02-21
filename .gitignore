@@ -1,0 +1,6 @@
+.vscode/
+raylib/
+w64devkit/
+misc/
+
+*.exe

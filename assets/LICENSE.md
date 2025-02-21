@@ -1,0 +1,1 @@
+Tileset made by IvoryRed on itch.io: https://ivoryred.itch.io/pixel-poker-cards distributed under the Creative Commons Attribution v4.0 International license
