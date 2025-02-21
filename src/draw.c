@@ -23,9 +23,20 @@ void draw_init() {
     cards_tileset = LoadTexture("./assets/cardtile.png");
 }
 
+void draw_room() {
+    for (int i = 0; i < GAME_ROOM_CAPACITY; i++) {
+        Card c = get_game()->room[i];
+        if (c == CARD_BLANK) { continue; }
+        Vector2 pos = {
+            i * CARD_W,
+            5 * CARD_H
+        };
+        draw_card(pos, c);
+    }
+}
+
 void draw_frame() {
     ClearBackground(RAYWHITE);
-
 
     int row_fit = GAME_SCREEN_W / CARD_W;
     for (int i = 0; i < DECK_CAPACITY; i++) {
@@ -35,6 +46,8 @@ void draw_frame() {
         };
         draw_card(pos, get_deck()->cards[i]);
     }
+
+    draw_room();
 }
 
 void draw_deinit() {
