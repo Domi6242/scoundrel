@@ -87,6 +87,16 @@ typedef enum Card {
     CARD_COUNT
 } Card;
 
+typedef enum ClickInteractable {
+    CLICK_ROOM_1,
+    CLICK_ROOM_2,
+    CLICK_ROOM_3,
+    CLICK_ROOM_4,
+    // CLICK_DECK,
+    CLICK_NONE,
+    CLICK_COUNT
+} ClickInteractable;
+
 static inline Suit get_suit(Card card) { return card % 4; }
 static inline int get_rank(Card card) { return card / 4; }
 

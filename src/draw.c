@@ -25,13 +25,10 @@ void draw_init() {
 
 void draw_room() {
     for (int i = 0; i < GAME_ROOM_CAPACITY; i++) {
-        Card c = get_game()->room[i];
+        Card c = get_room()->cards[i];
         if (c == CARD_BLANK) { continue; }
-        Vector2 pos = {
-            i * CARD_W,
-            5 * CARD_H
-        };
-        draw_card(pos, c);
+        Rectangle rect = get_room()->card_rects[i];
+        draw_card((Vector2){ rect.x, rect.y }, c);
     }
 }
 
